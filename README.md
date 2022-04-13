@@ -1,1 +1,10 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Next.js template
+
+## How to use
+
+Install it and run:
+
+```sh
+yarn
+yarn dev
+```
