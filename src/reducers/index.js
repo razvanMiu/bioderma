@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import api from '../middleware/api';
 
-import registry from './registry';
+import theme from './theme';
 
 const reducer = {
-  registry,
+  theme,
 };
 
 export default configureStore({ reducer, middleware: [api] });

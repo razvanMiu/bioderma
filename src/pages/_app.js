@@ -2,12 +2,12 @@ import { Provider } from 'react-redux';
 import Head from 'next/head';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import store from '@bioderma/reducers';
-import getLayout from '@bioderma/components/layout';
-import createEmotionCache from '@bioderma/createEmotionCache';
-import CustomThemeProvider from '@bioderma/themes';
+import createEmotionCache from '@app/createEmotionCache';
+import store from '~/reducers';
+import getLayout from '~/components/layout';
+import CustomThemeProvider from '~/themes';
 
-import '@bioderma/styles/global.scss';
+import '~/styles/global.scss';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

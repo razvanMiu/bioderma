@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import { setTheme } from '@bioderma/actions';
+import { setTheme } from '~/actions';
 
-function Home({ registry, setTheme }) {
+function Home({ theme, setTheme }) {
   return (
     <>
       <FormControlLabel
         control={
           <Switch
-            checked={registry.appTheme === 'dark'}
+            checked={theme.mode === 'dark'}
             onChange={(event) => {
               setTheme(event.target.checked ? 'dark' : 'light');
             }}
@@ -26,7 +26,7 @@ Home.description = 'Bioderma este o alifie.';
 
 export default connect(
   (state) => ({
-    registry: state.registry,
+    theme: state.theme,
   }),
   { setTheme },
 )(Home);
